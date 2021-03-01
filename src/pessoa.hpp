@@ -5,16 +5,12 @@
 
 class Pessoa
 {
-private:
+protected:
     int diaNa;
     int mesNa;
     int anoNa;
     int idade;
     char nome[50];
-
-    // ASSOCIACAO entre o objeto Pessoa e Universidade
-    Universidade* uniFiliado;
-    Departamento* departFiliado;
 
     void inicializa(int diaN = 0, int mesN = 0, int anoN = 0, const char* name = "");
 
@@ -26,11 +22,6 @@ public:
     void calcIdade(int diaAt, int mesAt, int anoAt);
     void printIdade();
 
-    void setUniFiliado(Universidade* uni);
-    void printOndTrabalha();
-
-    void setDepartFiliado(Departamento* depart);
-    void printDepartTrabalha();
 
     int getIdade();
 };

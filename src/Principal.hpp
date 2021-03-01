@@ -20,14 +20,16 @@
         Para "começar" por esse objeto. 
 */
 
-#include "pessoa.hpp"
+#include "professor.hpp"
+#include "aluno.hpp"
 
 class Principal
 {
 private:
     // Composicao, chama a construtora sem parametros.
     // eh COMPOSICAO, POIS SEM O PRINCIPAL, PESSOA E UNIVERSIDADE NAO EXISTE
-    Pessoa Arudina;
+    Professor Arudina;
+    Aluno Alpheratz;
 
     Universidade uniFicticia;
 
