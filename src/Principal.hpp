@@ -24,9 +24,20 @@
 
 class Principal
 {
+private:
+    // Composicao, chama a construtora sem parametros.
+    // eh COMPOSICAO, POIS SEM O PRINCIPAL, PESSOA E UNIVERSIDADE NAO EXISTE
+    Pessoa Arudina;
+
+    Universidade uniFicticia;
+
+    Departamento departFicticia;
+
 public:
     Principal();
     ~Principal();
+
+    void execute();
 };
 
 #endif

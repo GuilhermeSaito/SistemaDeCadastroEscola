@@ -1,22 +1,32 @@
 #include "Principal.hpp"
 
-Principal::Principal()
+Principal::Principal():
+    // Chamada dos construtores com parametro.
+    Arudina(32, 14, 2044, "Arudina"),
+
+    uniFicticia("4rd School of Engineer"),
+
+    departFicticia("Department of technology")
 {
-    Pessoa Arudina(32, 14, 2044, "Arudina");
-    Pessoa Einstein (14,3,1879, "Albert Einstein");
-    Pessoa Newton  (4,1,1643, "Isaac Newton");
-
-    Arudina.calcIdade   (1, 3, 2021);
-    Einstein.calcIdade  (1, 3, 2021);
-    Newton.calcIdade    (1, 3, 2021);
-
-    Arudina.printIdade();
-    Einstein.printIdade();
-    Newton.printIdade();
-
-    cout << "\nTeste: Arudina: " << Arudina.getIdade() << " yo\n"; 
+    execute();
 } 
 Principal::~Principal()
 {
     cout << "See ya Another World" << endl;
+}
+
+void Principal::execute()
+{
+    Arudina.calcIdade   (1, 3, 2021);
+
+    Arudina.printIdade();
+
+    uniFicticia.setDepartamento(&departFicticia);
+    departFicticia.setUniversidadeFiliada(&uniFicticia);
+
+    Arudina.setUniFiliado(&uniFicticia);
+    Arudina.setDepartFiliado(&departFicticia);
+
+    Arudina.printOndTrabalha();
+    Arudina.printDepartTrabalha();
 }
