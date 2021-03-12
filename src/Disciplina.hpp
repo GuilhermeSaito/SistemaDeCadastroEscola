@@ -1,6 +1,8 @@
 #ifndef DISCIPLINA
 #define DISCIPLINA
 
+class TheAluno;
+class Aluno;
 class Departamento;
 class Disciplina
 {
@@ -12,6 +14,9 @@ private:
     Disciplina* pDisciAnterior;
 
     Departamento* departAssociado;
+
+    TheAluno* theAlunoPrim;
+    TheAluno* theAlunoAtual;
 
 public:
     Disciplina(int iD = -1, const char* name = "", const char* areaConhe = "");
@@ -29,6 +34,14 @@ public:
     void setDepartamentoAss(Departamento* departAss);
     Departamento* getDepartamentoAss();
     void showWitchDepartIsAssociate();
+
+    void setTheAlunoPrim(TheAluno* elem);
+    TheAluno* getTheAlunoPrim();
+    void setTheAlunoAtual(TheAluno* elem);
+    TheAluno* getTheAlunoAtual();
+    bool incluirAluno(Aluno* al);
+    void listAlunos();
+
 };
 
 #endif

@@ -33,12 +33,18 @@ void Principal::execute()
     departFicticia.setUniversidadeFiliada(&uniFicticia);
     //departFicticia.incluirDisicplina(&primeiraDisciplina); com o operador this no setDepart, nao precisa mais incluir assim
     //departFicticia.incluirDisicplina(&segundaDisciplina);
+    // Set Disciplina -> Departamento
     primeiraDisciplina.setDepartamentoAss(&departFicticia);
     segundaDisciplina.setDepartamentoAss(&departFicticia);
+    // Set Disciplina -> Aluno
+    primeiraDisciplina.incluirAluno(&Alpheratz);
 
+    // Set Aluno -> Universidade
     Arudina.setUniFiliado(&uniFicticia);
     Alpheratz.setUniFiliado(&uniFicticia);
+    // Set Professor -> Departamento
     Arudina.setDepartFiliado(&departFicticia);
+
 
     Arudina.printOndTrabalha();
     Arudina.printDepartTrabalha();
@@ -48,4 +54,6 @@ void Principal::execute()
     //departFicticia.listarDisciplinasTrasFrente();
     primeiraDisciplina.showWitchDepartIsAssociate();
     segundaDisciplina.showWitchDepartIsAssociate();
+    primeiraDisciplina.listAlunos();
+    segundaDisciplina.listAlunos();
 }

@@ -22,8 +22,8 @@ public:
     void calcIdade(int diaAt, int mesAt, int anoAt);
     void printIdade();
 
-
     int getIdade();
+    char* getNome();
 };
 
 #endif

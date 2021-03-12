@@ -39,3 +39,4 @@ void Pessoa::printIdade()
 }
 
 int Pessoa::getIdade() { return idade; }
+char* Pessoa::getNome() { return nome; }
