@@ -7,7 +7,10 @@ Principal::Principal():
 
     uniFicticia("4rd School of Engineer"),
 
-    departFicticia("Department of technology")
+    departFicticia("Department of technology"),
+
+    primeiraDisciplina(1, "Primeira Disciplina", "Alguma Area"),
+    segundaDisciplina(2, "Segunda Disciplina", "Alguma outra Area")
 {
     execute();
 } 
@@ -26,7 +29,12 @@ void Principal::execute()
     Alpheratz.printIdade();
 
     uniFicticia.setDepartamento(&departFicticia);
+
     departFicticia.setUniversidadeFiliada(&uniFicticia);
+    //departFicticia.incluirDisicplina(&primeiraDisciplina); com o operador this no setDepart, nao precisa mais incluir assim
+    //departFicticia.incluirDisicplina(&segundaDisciplina);
+    primeiraDisciplina.setDepartamentoAss(&departFicticia);
+    segundaDisciplina.setDepartamentoAss(&departFicticia);
 
     Arudina.setUniFiliado(&uniFicticia);
     Alpheratz.setUniFiliado(&uniFicticia);
@@ -35,4 +43,9 @@ void Principal::execute()
     Arudina.printOndTrabalha();
     Arudina.printDepartTrabalha();
     Alpheratz.printOndEstuda();
+
+    departFicticia.listarDisciplinas();
+    //departFicticia.listarDisciplinasTrasFrente();
+    primeiraDisciplina.showWitchDepartIsAssociate();
+    segundaDisciplina.showWitchDepartIsAssociate();
 }

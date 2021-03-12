@@ -1,6 +1,8 @@
 #ifndef DEPARTAMENTO
 #define DEPARTAMENTO
 
+#include "Disciplina.hpp"
+
 #include <string.h>
 #include <iostream>
 using std::cout;
@@ -14,6 +16,9 @@ private:
 
     Universidade* uniFiliada;
 
+    Disciplina* pDisciPrim;
+    Disciplina* pDisciAtual;
+
 public:
     Departamento(const char* name = "");
     Departamento();
@@ -24,6 +29,14 @@ public:
 
     const char* getNome() const;
     void setNome(const char* name);
+
+    void setPDisciplinaPrim(Disciplina* pDisc);
+    Disciplina* getPDisciplinaPrim();
+    void setPDisciplinaAtual(Disciplina* pDisc);
+    Disciplina* getPDisciplinaAtual();
+    void incluirDisicplina(Disciplina* dis);
+    void listarDisciplinas();
+    void listarDisciplinasTrasFrente();
 };
 
 #endif
