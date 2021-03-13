@@ -1,12 +1,16 @@
-#ifndef PRINCIPAL
-#define PRINCIPAL
+#pragma once
 
-#include "professor.hpp"
-#include "aluno.hpp"
+#include "listaAluno.hpp"
+#include "listaDisciplina.hpp"
+#include "listaDepartamento.hpp"
+#include "listaUniversidade.hpp"
+
+using std::cin;
 
 class Principal
 {
 private:
+    /*
     // Composicao, chama a construtora sem parametros.
     // eh COMPOSICAO, POIS SEM O PRINCIPAL, PESSOA E UNIVERSIDADE NAO EXISTE
     Professor Arudina;
@@ -17,13 +21,21 @@ private:
     Departamento departFicticia;
 
     Disciplina primeiraDisciplina;
-    Disciplina segundaDisciplina;
+    Disciplina segundaDisciplina;*/
+
+    ListaAluno listaAluno;
+    ListaDiscipina listaDisciplina;
+    ListaDepartamento listaDepartamento;
+    ListaUniversidade listaUniversidade;
 
 public:
     Principal();
     ~Principal();
 
     void execute();
-};
 
-#endif
+    void menu();
+    void cadastrarUniversidade();
+    void cadastrarDepartamento();
+    void cadastrarDisciplina();
+};

@@ -1,27 +1,14 @@
 #include "pessoa.hpp"
 
-Pessoa::Pessoa(int diaN, int mesN, int anoN, const char* name):
-    diaNa(diaN),
-    mesNa(mesN),
-    anoNa(anoN),
-    idade(-1)
+Pessoa::Pessoa(int diaN, int mesN, int anoN, const char *name) : diaNa(diaN),
+                                                                 mesNa(mesN),
+                                                                 anoNa(anoN),
+                                                                 idade(-1)
 {
     strcpy(nome, name);
-}
-Pessoa::Pessoa()
-{
-    inicializa();
 }
 Pessoa::~Pessoa()
 {
-}
-void Pessoa::inicializa(int diaN, int mesN, int anoN, const char* name)
-{
-    diaNa = diaN;
-    mesNa = mesN;
-    anoNa = anoN;
-    strcpy(nome, name);
-    idade = -1;
 }
 
 // Principio do Desacoplamento, O COUT PARA INFORMAR A IDADE NAO FICA JUNTO COM ESSE METODO DE CALCULO DA IDADE
@@ -39,4 +26,4 @@ void Pessoa::printIdade()
 }
 
 int Pessoa::getIdade() { return idade; }
-char* Pessoa::getNome() { return nome; }
+const char *Pessoa::getNome() { return nome; }
