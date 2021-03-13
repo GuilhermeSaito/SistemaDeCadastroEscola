@@ -24,10 +24,6 @@ public:
     const char *getNome() const;
     void setNome(const char *name);
 
-    void setPDisciplinaPrim(Disciplina *pDisc);
-    Disciplina *getPDisciplinaPrim();
-    void setPDisciplinaAtual(Disciplina *pDisc);
-    Disciplina *getPDisciplinaAtual();
     void incluirDisicplina(Disciplina *dis);
     void listarDisciplinas();
 };
